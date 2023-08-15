@@ -1,0 +1,49 @@
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    input {
+        width: 50px;
+    }
+
+    p {
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 1000px;
+    }
+</style>
+<h1>Cart</h1>
+<table>
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price | currency }}</td>
+            <td><input type="number" [(ngModel)]="product.quantily" (ngModelChange)="calculateTotal(product)"></td>
+            <td>{{ product.total | currency }}</td>
+        </tr>
+    </tbody>
+</table>
+<p>Total: {{ calculateTotalPrice() | currency }}</p>
