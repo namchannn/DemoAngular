@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     CategoriesComponent,
-    CartComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
