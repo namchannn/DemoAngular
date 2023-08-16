@@ -1,1 +1,30 @@
+<style>
+    .product {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .product h3 {
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+    .product p {
+        margin-left: 50px;
+    }
+
+    .product button {
+        margin-left: 50px;
+    }
+</style>
 <h1>Categories</h1>
+<div *ngFor="let product of products" class="product">
+    <img [src]="product.thumbnail" alt="{{ product.title }}" class="thumbnail">
+    <div class="product-details">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <p>Price: {{ product.price | currency }}</p>
+        <p>Rating: {{ product.rating }}</p>
+        <button (click)="addToCart(product)">Add to Cart</button>
+    </div>
+</div>
