@@ -1,34 +1,17 @@
-<style>
-    .product {
-        display: flex;
-        padding-bottom: 50px;
-    }
-
-    .product h3 {
-        margin-top: 30px;
-        margin-left: 50px;
-    }
-
-    .product p {
-        margin-left: 50px;
-    }
-
-    .product button {
-        margin-left: 50px;
-    }
-
-    h1 {
-        margin-bottom: 30px;
-    }
-</style>
-<h1>Categories</h1>
-<div *ngFor="let product of products" class="product">
-    <img [src]="product.thumbnail" alt="{{ product.title }}" class="thumbnail">
-    <div class="product-details">
-        <h3>{{ product.title }}</h3>
-        <p>{{ product.description }}</p>
-        <p>Price: {{ product.price | currency }}</p>
-        <p>Rating: {{ product.rating }}</p>
-        <button (click)="addToCart(product)">Add to Cart</button>
+<div class="bg"></div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card temp mt-3 mb-3">
+                    <div class="card-body">
+                        <p>2023-06-23 15:00:00</p>
+                        <h2>27<sup>o</sup></h2>
+                        <p>Trời hôm nay nhiều mây</p>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
