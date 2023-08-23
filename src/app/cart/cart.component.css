@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input {
+    width: 50px;
+}
+
+p {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 70%;
+}
+
+@media (min-width: 768px) {
+    p {
+        margin-left: 78%;
+    }
+}

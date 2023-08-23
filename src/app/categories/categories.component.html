@@ -2,12 +2,12 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-3" *ngFor="let data of weatherData">
                 <div class="card temp mt-3 mb-3">
                     <div class="card-body">
-                        <p>2023-06-23 15:00:00</p>
-                        <h2>27<sup>o</sup></h2>
-                        <p>Trời hôm nay nhiều mây</p>
+                        <p>{{data.time}}</p>
+                        <h2>{{data.temp}}<sup>o</sup>C</h2>
+                        <p>{{data.desc}}</p>
                         <img src="https://openweathermap.org/img/wn/10d@2x.png">
                     </div>
                 </div>
