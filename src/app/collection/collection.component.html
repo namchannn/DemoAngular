@@ -1,0 +1,16 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-3" *ngFor="let p of albums">
+                <div class="card temp mt-3 mb-3">
+                    <div class="card-body">
+                        <img src="{{p.images[0]}}">
+                        <h6>{{p.brand}}</h6>
+                        <p>{{p.title}}</p>
+                        <p>${{p.price}}.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

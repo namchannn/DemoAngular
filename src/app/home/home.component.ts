@@ -15,9 +15,7 @@ export class HomeComponent {
 
     inputValue = "";
 
-    constructor(private http: HttpClient) { // khởi tạo
-
-    }
+    constructor(private http: HttpClient) { } // khởi tạo
 
     ngOnInit() { // sau khi dựng UI xong
         this.weather("hanoi");

@@ -11,9 +11,7 @@ export class CategoriesComponent {
     forecast: any = [];
     inputValue = "";
 
-    constructor(private http: HttpClient) {
-
-    }
+    constructor(private http: HttpClient) { }
 
     ngOnInit() {
         this.getForecast("hanoi");

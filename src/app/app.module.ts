@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
 import { CartComponent } from './cart/cart.component';
+import { CollectionComponent } from './collection/collection.component';
 import { HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'categories', component: CategoriesComponent},
-  {path: 'cart', component: CartComponent}
+  {path: 'cart', component: CartComponent},
+  {path: 'collection', component: CollectionComponent}
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     CategoriesComponent,
-    CartComponent
+    CartComponent,
+    CollectionComponent
   ],
   imports: [
     BrowserModule,
