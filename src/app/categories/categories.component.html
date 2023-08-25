@@ -8,7 +8,7 @@
                         <p>{{data.time}}</p>
                         <h2>{{data.temp}}<sup>o</sup>C</h2>
                         <p>{{data.desc}}</p>
-                        <img src="https://openweathermap.org/img/wn/10d@2x.png">
+                        <img [src]="data.icon">
                     </div>
                 </div>
             </div>
