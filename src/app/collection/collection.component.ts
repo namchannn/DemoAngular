@@ -9,6 +9,11 @@ import { HttpClient } from '@angular/common/http';
 
 export class CollectionComponent {
     albums: any = [];
+    currentPage = 1;
+    skip = 0;
+    limit = 8;
+    total = 100;
+    pages: Number[] = [];
 
     constructor(private http: HttpClient) { }
 
@@ -17,9 +22,14 @@ export class CollectionComponent {
     }
 
     showCollection() {
-        const url = `https://dummyjson.com/products?limit=100&skip=0`;
+        const url = `https://dummyjson.com/products?limit=8&skip=0`;
         this.http.get<any>(url).subscribe(data => {
             this.albums = data.products;
+            this.total = data.total;
+            var n = this.total%this.limit == 0 ? this.total/this.limit : this.total/this.limit + 1;
+            for(var i = 1; i <= n; i++) {
+                this.pages.push(i);
+            }
         })
     }
 
