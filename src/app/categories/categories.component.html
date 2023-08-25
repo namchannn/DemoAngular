@@ -1,14 +1,22 @@
 <div class="bg"></div>
 <section>
     <div class="container">
+        <form (submit)="findWeather()" action="#" method="post">
+            <input type="text" [(ngModel)]="inputValue" name="city" placeholder="City" id="ipc">
+            <button type="submit" class="btn btn-primary">Find</button>
+        </form>
+    </div>
+</section>
+<section>
+    <div class="container">
         <div class="row">
-            <div class="col-3" *ngFor="let data of weatherData">
+            <div class="col-3" *ngFor="let f of forecast">
                 <div class="card temp mt-3 mb-3">
                     <div class="card-body">
-                        <p>{{data.time}}</p>
-                        <h2>{{data.temp}}<sup>o</sup>C</h2>
-                        <p>{{data.desc}}</p>
-                        <img [src]="data.icon">
+                        <p>{{f.dt_txt}}</p>
+                        <h2>{{f.main.temp}}<sup>o</sup>C</h2>
+                        <p>{{f.weather[0].description}}</p>
+                        <img src="https://openweathermap.org/img/wn/{{f.weather[0].icon}}@2x.png">
                     </div>
                 </div>
             </div>
