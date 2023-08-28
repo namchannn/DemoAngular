@@ -26,7 +26,7 @@ export class CollectionComponent {
         this.http.get<any>(url).subscribe(data => {
             this.albums = data.products;
             this.total = data.total;
-            var n = this.total%this.limit == 0 ? this.total/this.limit : this.total/this.limit + 1;
+            var n = this.total % this.limit == 0 ? this.total/this.limit : this.total/this.limit + 1;
             for(var i = 1; i <= n; i++) {
                 this.pages.push(i);
             }
@@ -38,6 +38,4 @@ export class CollectionComponent {
         this.skip = (page - 1) * this.limit;
         this.showCollection();
     }
-
-
 }
