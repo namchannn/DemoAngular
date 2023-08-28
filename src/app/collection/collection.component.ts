@@ -22,7 +22,7 @@ export class CollectionComponent {
     }
 
     showCollection() {
-        const url = `https://dummyjson.com/products?limit=8&skip=0`;
+        const url = `https://dummyjson.com/products?limit=${this.limit}&skip=${this.skip}`;
         this.http.get<any>(url).subscribe(data => {
             this.albums = data.products;
             this.total = data.total;
@@ -31,6 +31,12 @@ export class CollectionComponent {
                 this.pages.push(i);
             }
         })
+    }
+
+    changePage(page: number) {
+        this.currentPage = page;
+        this.skip = (page - 1) * this.limit;
+        this.showCollection();
     }
 
 

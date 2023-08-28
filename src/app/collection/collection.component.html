@@ -1,8 +1,11 @@
 <section>
+    <div class="container__btn">
+        <button *ngFor="let i of pages" type="button" (click)="changePage()" class="btn btn-primary" ngClass="btn">{{i}}</button>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-3" *ngFor="let p of albums">
-                <div class="card temp mt-3 mb-3">
+                <div class="card temp mt-3 mb-3" ngClass="card">
                     <div class="card-body">
                         <img src="{{p.images[0]}}">
                         <h6>{{p.brand}}</h6>
@@ -12,10 +15,10 @@
                 </div>
             </div>
         </div>
-        <ul>
+        <!-- <ul>
             <li *ngFor="let i of pages">
                 {{i}}
             </li>
-        </ul>
+        </ul> -->
     </div>
 </section>
