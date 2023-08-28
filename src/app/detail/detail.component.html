@@ -1,0 +1,8 @@
+<h1>Detail {{id}}</h1>
+<h2>Name: {{product.title}}</h2>
+<h2>Price: {{product.price}}</h2>
+<img src="{{product.thumbnail}}">
+
+<ul>
+    <li *ngFor="let img of product.images"><img (click)="changeImg(img)" src="{{img}}" width="100"></li>
+</ul>

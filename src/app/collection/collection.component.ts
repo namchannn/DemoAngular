@@ -8,12 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class CollectionComponent {
-    albums: any = [];
+    albums:any = [];
     currentPage = 1;
     skip = 0;
     limit = 8;
     total = 100;
-    pages: Number[] = [];
+    pages:number[] = [];
 
     constructor(private http: HttpClient) { }
 
@@ -33,7 +33,7 @@ export class CollectionComponent {
         })
     }
 
-    changePage(page: number) {
+    changePage(page:number) {
         this.currentPage = page;
         this.skip = (page - 1) * this.limit;
         this.showCollection();

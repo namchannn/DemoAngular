@@ -9,32 +9,41 @@ import { parseHostBindings } from '@angular/compiler';
 })
 
 export class SearchComponent {
-    products: any = [];
-    total = 100;
+    products:any = [];
+    total = 0;
     limit = 8;
-    page = 1;
+    page:number = 1;
     max_page = 1;
-    pages: Number[] = [];
+    pages:number[] = [];
 
     constructor(private http: HttpClient) { }
 
     ngOnInit() {
-        this.search();
+        this.search(1);
     }
 
     paginate() {
         let n = (this.total / this.limit).toString();
         this.max_page = this.total % this.limit == 0 ? parseInt(n) : parseInt(n) + 1;
+        this.pages = [];
         for (var i = 1; i <= this.max_page; i++) {
             this.pages.push(i);
         }
     }
 
-    search() {
-        const url = `https://dummyjson.com/products?limit=8&skip=0`;
+    search(p:number) {
+        this.page = p;
+        const skip = (this.page - 1) * this.limit;
+        const url = `https://dummyjson.com/products?limit=${this.limit}&skip=${skip}`;
         this.http.get<any>(url).subscribe(data => {
             this.products = data.products;
+            this.total = data.total;
+            this.paginate();
 
-        })
+        });
+    }
+
+    changePage(p : number) {
+        this.search(p);
     }
 }
