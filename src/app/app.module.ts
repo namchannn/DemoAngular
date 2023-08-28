@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
 import { CartComponent } from './cart/cart.component';
-import { CollectionComponent } from './collection/collection.component';
 import { HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
@@ -17,7 +16,6 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'categories', component: CategoriesComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'collection', component: CollectionComponent},
   {path: 'search', component: SearchComponent},
   {path: 'detail/:id', component: DetailComponent}
 ];
@@ -28,7 +26,6 @@ const appRoutes: Routes = [
     HomeComponent,
     CategoriesComponent,
     CartComponent,
-    CollectionComponent,
     SearchComponent,
     DetailComponent
   ],

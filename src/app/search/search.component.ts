@@ -9,12 +9,12 @@ import { parseHostBindings } from '@angular/compiler';
 })
 
 export class SearchComponent {
-    products:any = [];
+    products: any = [];
     total = 0;
     limit = 8;
-    page:number = 1;
+    page: number = 1;
     max_page = 1;
-    pages:number[] = [];
+    pages: number[] = [];
 
     constructor(private http: HttpClient) { }
 
@@ -31,7 +31,7 @@ export class SearchComponent {
         }
     }
 
-    search(p:number) {
+    search(p: number) {
         this.page = p;
         const skip = (this.page - 1) * this.limit;
         const url = `https://dummyjson.com/products?limit=${this.limit}&skip=${skip}`;
@@ -43,7 +43,7 @@ export class SearchComponent {
         });
     }
 
-    changePage(p : number) {
+    changePage(p: number) {
         this.search(p);
     }
 }
