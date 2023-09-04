@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component ({
     selector: 'rome',
-    templateUrl: "./rome.component.html",
+    templateUrl: "../rome/rome.component.html",
     styleUrls: ['./rome.component.css']
 })
 
