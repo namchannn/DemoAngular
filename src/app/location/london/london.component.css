@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+    padding-top: 20px;
+    color: black;
+}
+
+img {
+    border-radius: 100%;
+    width: 55px;
+    margin-right: 30px;
+}
