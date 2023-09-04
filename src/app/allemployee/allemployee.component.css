@@ -6,17 +6,18 @@
 
 table {
     font-family: arial, sans-serif;
-    width: 100%;
-    margin-top: 30px;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 50px;
 }
 
-td, th {
+td {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
 }
 
-h3 {
+h2, h3 {
     margin-top: 10px;
 }
 
@@ -27,6 +28,7 @@ li {
 
 .row {
     margin-top: 100px;
+    border: 2px solid #000;
 }
 
 .ava1 {
@@ -46,7 +48,9 @@ li {
 .employee-list {
     max-height: 350px; 
     width: 320px;
-    overflow-y: auto; 
+    overflow-y: auto;
+    margin: 5px;
+    border: 1px solid #000;
 }
 
 .employee-list ul {
@@ -63,6 +67,10 @@ li {
 .employee-list li:hover {
     color: #fff;
     background-color: blue; 
+}
+
+.employee-infor {
+    margin: 10px;
 }
 
 @media (max-width: 1200px) {
