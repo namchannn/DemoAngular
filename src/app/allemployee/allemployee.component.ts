@@ -62,7 +62,7 @@ export class allEmployeeComponent {
             lv: "Team Lead",
             birth: "07/07/0007",
             city: "rome",
-            phone: 777777777
+            phone: 7777777777
         },
         {
             ava: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTql1L2nDunnwamDIr29dCtgnF9TMIVm9hjgw&usqp=CAU",
