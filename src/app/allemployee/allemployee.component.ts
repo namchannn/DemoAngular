@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
 export class allEmployeeComponent {
     emp: any = [
         {
-            ava: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMyVleWnalXp87UyFat0iKO-GrdstjLs4RkQ&usqp=CAU",
+            ava: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn--D938zG2cmSWDcT6MGOZKjwAjS29-WnZci_71-sl4t452T0PmdBnnojHT88uxiuUT8&usqp=CAU",
             name: "User 1",
             lv: "Team Lead",
             birth: "01/01/0001",

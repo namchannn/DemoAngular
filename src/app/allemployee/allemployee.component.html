@@ -9,27 +9,26 @@
         </ul>
       </div>
     </div>
-  
     <div class="col-9">
       <div *ngIf="selectedEmp" class="employee-infor">
         <img src="{{selectedEmp.ava}}" class="ava2">
         <h2>{{selectedEmp.name}}</h2>
         <table border="1">
           <tr>
-              <td><strong>Title</strong></td>
-              <td>{{selectedEmp.lv}}</td>
+              <td><h6>Title</h6></td>
+              <td><p>{{selectedEmp.lv}}</p></td>
           </tr>
           <tr>
-              <td><strong>Birth</strong></td>
-              <td>{{selectedEmp.birth}}</td>
+              <td><h6>Birth</h6></td>
+              <td><p>{{selectedEmp.birth}}</p></td>
           </tr>
           <tr>
-              <td><strong>City</strong></td>
-              <td>{{selectedEmp.city}}</td>
+              <td><h6>City</h6></td>
+              <td><p>{{selectedEmp.city}}</p></td>
           </tr>
           <tr>
-              <td><strong>Phone</strong></td>
-              <td>{{selectedEmp.phone}}</td>
+              <td><h6>Phone</h6></td>
+              <td><p>{{selectedEmp.phone}}</p></td>
           </tr>
         </table>
       </div>

@@ -13,12 +13,21 @@ table {
 
 td {
     border: 1px solid black;
-    text-align: left;
+    text-align: start;
     padding: 8px;
 }
 
 h2, h3 {
     margin-top: 10px;
+}
+
+h6 {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 10px;
 }
 
 li {
