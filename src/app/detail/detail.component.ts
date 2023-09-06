@@ -10,7 +10,7 @@ import { ActivatedRoute } from "@angular/router";
 
 export class DetailComponent {
     id = 0;
-    product:any = {};
+    product: any = {};
 
     constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
@@ -28,7 +28,7 @@ export class DetailComponent {
         });
     }
 
-    changeImg(urlImg:string) {
+    changeImg(urlImg: string) {
         this.product.thumbnail = urlImg;
     }
 }
